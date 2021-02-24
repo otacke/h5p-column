@@ -641,6 +641,12 @@ H5P.Column = (function (EventDispatcher) {
           }
         });
         break;
+
+      case 'H5P.Agamotto':
+        if (typeof instance.removeFullscreenButton === 'function') {
+          instance.removeFullscreenButton();
+        }
+        break;
     }
   }
 

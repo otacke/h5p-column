@@ -1,6 +1,6 @@
 var H5PUpgrades = H5PUpgrades || {};
 
-H5PUpgrades['H5P.Column'] = (function () {
+H5PUpgrades['H5P.ColumnNOTENO'] = (function () {
   return {
     1: {
 

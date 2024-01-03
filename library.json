@@ -1,6 +1,6 @@
 {
-  "machineName": "H5P.Column",
-  "title": "Column",
+  "machineName": "H5P.ColumnNOTENO",
+  "title": "Column (note.no)",
   "description": "Content holder displaying content in a column.",
   "contentType": "instructional",
   "license": "MIT",

@@ -1,4 +1,4 @@
-H5P.Column = (function (EventDispatcher) {
+H5P.ColumnNOTENO = (function (EventDispatcher) {
 
   /**
    * Column Constructor
@@ -8,8 +8,8 @@ H5P.Column = (function (EventDispatcher) {
    * @param {number} id Content identifier
    * @param {Object} data User specific data to adapt behavior
    */
-  function Column(params, id, data) {
-    /** @alias H5P.Column# */
+  function ColumnNOTENO(params, id, data) {
+    /** @alias H5P.ColumnNOTENO# */
     var self = this;
 
     // We support events by extending this class
@@ -124,7 +124,7 @@ H5P.Column = (function (EventDispatcher) {
       bubbleUp(instance, 'resize', self);
 
       // Check if instance is a task
-      if (Column.isTask(instance)) {
+      if (ColumnNOTENO.isTask(instance)) {
         // Tasks requires completion
 
         instance.on('xAPI', trackScoring(numTasks));
@@ -437,7 +437,7 @@ H5P.Column = (function (EventDispatcher) {
      * @return {string} Title.
      */
     self.getTitle = function () {
-      return H5P.createTitle((self.contentData && self.contentData.metadata && self.contentData.metadata.title) ? self.contentData.metadata.title : 'Column');
+      return H5P.createTitle((self.contentData && self.contentData.metadata && self.contentData.metadata.title) ? self.contentData.metadata.title : 'ColumnNOTENO');
     };
 
     /**
@@ -491,8 +491,8 @@ H5P.Column = (function (EventDispatcher) {
     self.setActivityStarted();
   }
 
-  Column.prototype = Object.create(EventDispatcher.prototype);
-  Column.prototype.constructor = Column;
+  ColumnNOTENO.prototype = Object.create(EventDispatcher.prototype);
+  ColumnNOTENO.prototype.constructor = ColumnNOTENO;
 
   /**
    * Makes it easy to bubble events from parent to children
@@ -563,7 +563,7 @@ H5P.Column = (function (EventDispatcher) {
    * @param {Object} instance
    * @return {boolean}
    */
-  Column.isTask = function (instance) {
+  ColumnNOTENO.isTask = function (instance) {
     if (instance.isTask !== undefined) {
       return instance.isTask; // Content will determine self if it's a task
     }
@@ -645,5 +645,5 @@ H5P.Column = (function (EventDispatcher) {
     }
   }
 
-  return Column;
+  return ColumnNOTENO;
 })(H5P.EventDispatcher);

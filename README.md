@@ -5,6 +5,8 @@ Display a list of content in a column format, each one below the next one.
 
 ## Changes to H5P.Column 1.16.5
 - Add Sort the Paragraphs 0.11 to options
+- Add MarkTheWordsNOTENO 1.11 to options
+- Add ImageHotspotQuestion 1.9 to options
 
 ## License
 
